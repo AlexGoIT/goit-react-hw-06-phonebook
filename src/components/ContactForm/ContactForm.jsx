@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 import { Form } from './ContactForm.styled';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/phonebookSlice';
 import { getContacts } from 'redux/selectors';
 
 const ContactForm = () => {
@@ -20,14 +19,13 @@ const ContactForm = () => {
     const form = e.target;
     const name = form.name.value;
     const number = form.number.value;
-    const id = nanoid(5);
 
     if (contacts.some(contact => contact.name === name)) {
       Notify.failure(`${name} is already in contacts`);
       return;
     }
 
-    dispatch(addContact({ id, name, number }));
+    dispatch(addContact(name, number));
 
     form.reset();
   };

@@ -11,6 +11,9 @@ const App = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilter);
 
+  console.log('App contacts', contacts);
+  // console.log('App filter', filter);
+
   // Filter
   const contactFilter = () => {
     return contacts.filter(contact =>
