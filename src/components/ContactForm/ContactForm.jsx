@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 import { Form } from './ContactForm.styled';
-import { addContact } from 'redux/actions';
+import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 
 const ContactForm = () => {

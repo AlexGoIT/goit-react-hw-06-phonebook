@@ -1,6 +1,6 @@
 import TextField from '@mui/material/TextField';
 import { useDispatch } from 'react-redux';
-import { setFilter } from 'redux/actions';
+import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();

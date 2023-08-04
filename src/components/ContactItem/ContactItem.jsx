@@ -4,7 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Item } from './ContactItem.styled';
 
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/actions';
+import { deleteContact } from 'redux/contactsSlice';
 
 const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
